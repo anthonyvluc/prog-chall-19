@@ -17,10 +17,24 @@ import (
     "fmt"
     "log"
     "os"
+    "strconv"
 )
 
 func main() {
+    var n_numbers int
+    var err error
+
+    /* Read from stdin. */
     scanner := bufio.NewScanner(os.Stdin)
+
+    /* Read n_numbers. */
+    scanner.Scan()
+    n_numbers, err = strconv.Atoi(scanner.Text())
+    if err != nil {
+        log.Println(err)
+    }
+
+    /* Read and evaluate the rest of the numbers. */
     for scanner.Scan() {
         fmt.Println(scanner.Text())
     }
