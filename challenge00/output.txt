@@ -4,3 +4,13 @@ Deck #3: 7
 Deck #4: 3999
 Deck #5: 3899
 Deck #6: 1234
+Deck #7: 699
+Deck #8: 599
+Deck #9: 469
+Deck #10: 699
+Deck #11: 299
+Deck #12: 239
+Deck #13: 599
+Deck #14: 799
+Deck #15: 899
+Deck #16: 557
