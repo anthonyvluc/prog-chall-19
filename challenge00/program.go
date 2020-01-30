@@ -34,8 +34,10 @@ func main() {
         var result string  = ""
 
         for _, char := range(s) {
-            if char >= prev_char {
+            if char > prev_char {
                 index += 1
+            } else if char == prev_char {
+                continue
             } else {
                 break
             }
