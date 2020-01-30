@@ -1,0 +1,12 @@
+Deck #1: 0
+Deck #2: 9
+Deck #3: 9999
+Deck #4: 9999
+Deck #5: 29999
+Deck #6: 29999
+Deck #7: 89999
+Deck #8: 0
+Deck #9: 7
+Deck #10: 12345
+Deck #11: 49999
+Deck #12: 12233

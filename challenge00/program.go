@@ -1,13 +1,25 @@
 /**
+ * # Challenge 00
+ *
  * https://www3.nd.edu/~pbui/teaching/cse.30872.fa19/challenge00.html
- * My Idea:
+ * https://code.google.com/codejam/contest/3264486/dashboard#s=p1
+ *
+ * ## My Idea
  *  1) Convert number n to string s
  *  2) Loop over string to return index q of the last index in s where
- *     it is not tidy.
+ *      it is not tidy.
  *  3a) If the index q is 0 or N-1, then return n
  *  3b) Otherwise return: to_num(s[i:q]+padded_zeros)-1
- * Time Complexity:
- * Space Complexity:
+ *
+ * ## Time Complexity
+ *      For n numbers with at most a length of s, the largest string in the set,
+ *      the time complexity in this program should be O(n*s).
+ *
+ * ## Space Complexity
+ *      There are no data structures used in this program, so there are no
+ *      variables which grow based on the input. Therefore, the space complexity
+ *      of this program is O(1).
+ *
  */
 
 package main
@@ -33,10 +45,17 @@ func main() {
         var prev_char rune = 0
         var result string  = ""
 
+        if s == "" {
+            s = "0"
+        }
+
         for pos, char := range(s) {
             if char > prev_char {
                 index = pos + 1
             } else if char == prev_char {
+                if pos == len(s) - 1 {
+                    index = pos + 1
+                }
                 continue
             } else {
                 break
