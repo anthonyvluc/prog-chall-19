@@ -33,9 +33,9 @@ func main() {
         var prev_char rune = 0
         var result string  = ""
 
-        for _, char := range(s) {
+        for pos, char := range(s) {
             if char > prev_char {
-                index += 1
+                index = pos + 1
             } else if char == prev_char {
                 continue
             } else {
