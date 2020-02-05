@@ -64,9 +64,9 @@ func main() {
     /* Process and print results. */
     for scanner.Scan() {
         line := scanner.Text()
-        rune_array := strings.Split(line, " ")
-        if len(rune_array) == 1 { continue }
-        printResults(rune_array[0], rune_array[1])
+        byte_array := strings.Split(line, " ")
+        if len(byte_array) != 2 { continue }
+        printResults(byte_array[0], byte_array[1])
     }
 
     /* END */

@@ -2,3 +2,15 @@ supercalifragilisticexpialidocious is
 supercalifragilisticexpialidocious ace
 supercalifragilisticexpialidocious rage
 supercalifragilisticexpialidocious zig
+abc a
+bca a
+abc b
+aabc a
+aabbc b
+aabbccc c
+aaabbbccc ab
+aaabbbccc aab
+aaabbbccc aaab
+aaabbbccc aaaab
+aaaabbbccc aaaab
+aaaabbbccc aaaabz
