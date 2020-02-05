@@ -18,6 +18,7 @@ package main
 import (
     "bufio"
     "fmt"
+    "math"
     "os"
     "strings"
 )
@@ -29,10 +30,12 @@ func main() {
 
         m1, m2 := make(map[rune]int), make(map[rune]int)
 
+        /* Count bytes of string 1. */
         for _, v := range s1 {
             m1[v] += 1
         }
 
+        /* Count bytes of string 2. */
         for _, v := range s2 {
             m2[v] += 1
         }
@@ -42,14 +45,11 @@ func main() {
             multiples[v] = m1[v] / m2[v]
         }
 
-        var min int = 0
-        fmt.Println(multiples)
-        fmt.Println(min)
-        fmt.Printf("%f\n",float64(1)/float64(10000)) // TODO
+        var max int = math.MaxInt32
         for _, v := range multiples {
-            if min < v {
-                min = v
-                results = min
+            if v < max {
+                max = v
+                results = max
             }
         }
 
