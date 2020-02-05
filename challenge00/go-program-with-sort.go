@@ -31,6 +31,7 @@ import (
     "math"
     "os"
     "strconv"
+    "sort"
     "sync"
 )
 
@@ -110,8 +111,16 @@ func challenge00() {
     }()
 
     /* Print results. */
+    /* TODO: this is sorting as string, not the deck number as number. */
+    slice := make([]string, n)
     for result := range ch {
-        fmt.Println(result)
+        slice = append(slice, result)
+    }
+    sort.Strings(slice)
+    for _, result := range slice {
+        if result != "" {
+            fmt.Println(result)
+        }
     }
 }
 
