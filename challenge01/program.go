@@ -9,8 +9,6 @@
  *
  * ## Space Complexity
  *
- * ## Potential Improvements
- *
  */
 
 package main
@@ -27,7 +25,6 @@ func main() {
 
     printResults := func(s1 string, s2 string) {
         var results int = 0
-
         m1, m2 := make(map[rune]int), make(map[rune]int)
 
         /* Count bytes of string 1. */
