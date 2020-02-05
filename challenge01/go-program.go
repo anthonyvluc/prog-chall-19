@@ -38,8 +38,8 @@ import (
 )
 
 func challenge01() {
-    var wg sync.WaitGroup
     ch := make(chan int)
+    wg := new(sync.WaitGroup)
 
     /* Function to print results. */
     generateResult := func(s1 string, s2 string) {
