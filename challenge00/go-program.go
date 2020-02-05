@@ -34,13 +34,13 @@ import (
     "sync"
 )
 
-func main() {
+func challenge00() {
     var n int          = 0
     var deck int       = 1
     var err error      = nil
     var s string       = ""
     var ch chan string = make(chan string)
-    wg := new(sync.WaitGroup)
+    var wg sync.WaitGroup
 
     generateResult := func(s string, deck int, ch chan<- string) {
         var index int      = 0
@@ -113,4 +113,8 @@ func main() {
     for result := range ch {
         fmt.Println(result)
     }
+}
+
+func main() {
+    challenge00()
 }
