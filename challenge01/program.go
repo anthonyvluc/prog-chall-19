@@ -45,7 +45,7 @@ func main() {
         var min int = 0
         fmt.Println(multiples)
         fmt.Println(min)
-        fmt.Println(1/10000) // TODO
+        fmt.Printf("%f\n",float64(1)/float64(10000)) // TODO
         for _, v := range multiples {
             if min < v {
                 min = v
