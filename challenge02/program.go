@@ -14,11 +14,25 @@
 package main
 
 import (
+    "bufio"
     "fmt"
+    "log"
+    "os"
+    "strings"
 )
 
 func challenge02() {
-    fmt.Println("Hi")
+
+    scanner := bufio.NewScanner(os.Stdin)
+    for scanner.Scan() {
+        line := scanner.Text()
+        str_arr := strings.Split(line, " ")
+        fmt.Println(str_arr)
+    }
+
+    if err := scanner.Err(); err != nil {
+        log.Fatal(err)
+    }
 }
 
 func main() {
