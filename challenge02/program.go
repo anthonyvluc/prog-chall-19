@@ -38,20 +38,24 @@ func challenge02(input []string) {
         err = fmt.Errorf("Invalid line format: %s", input)
     } else if len(input) >= 3 {
         if (len(input) - 1) % 2 == 0 {
+            err = nil
             for i := 0; i < len(input); i += 2 {
                 if i == 0 {
-                    op1, _ = strconv.Atoi(input[i])
-                    op2, _ = strconv.Atoi(input[i+1])
+                    op1, err = strconv.Atoi(input[i])
+                    op2, err = strconv.Atoi(input[i+1])
                     op = input[i+2]
                     i += 1
                 } else {
                     op1 = unit.Compute()
-                    op2, _ = strconv.Atoi(input[i])
+                    op2, err = strconv.Atoi(input[i])
                     op = input[i+1]
                 }
-                unit.Update(op1, op2, op)
+                if err == nil {
+                    unit.Update(op1, op2, op)
+                } else {
+                    err = fmt.Errorf("Invalid strconv in: %s", input)
+                }
             }
-            err = nil
         } else {
             err = fmt.Errorf("Invalid line format: %s", input)
         }
