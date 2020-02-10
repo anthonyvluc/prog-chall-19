@@ -21,6 +21,7 @@ import (
     "strconv"
     "strings"
 
+    "./led"
     "./unit"
 )
 
@@ -67,7 +68,7 @@ func challenge02(input []string) {
         if len(input) >= 3 {
             result = unit.Compute()
         }
-        fmt.Println(result)
+        fmt.Println(led.LEDFormat(result))
     }
 }
 
